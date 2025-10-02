@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Безопасный интернет для детей</title>
+  <style>
+    .top-bar {
+      background: #f0f4ff;
+      padding: 8px 20px;
+      text-align: right;
+      font-size: 16px;
+    }
+    .top-bar a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #2b5dab;
+      font-weight: bold;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80') no-repeat center center;
+      background-size: cover;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e7f0fd;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background: #d0e2ff;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #2b5dab;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    h2 {
+      color: #2b5dab;
+    }
+
+    ul.rules {
+      list-style: none;
+      padding: 0;
+    }
+
+    .rules li {
+      background: white;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .quiz {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 40px;
+    }
+
+    .quiz img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    .quiz button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 10px 10px 0 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #story {
+      margin-top: 40px;
+    }
+
+    #story div {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .go-to-game {
+      text-align: center;
+      margin: 50px 0 30px;
+    }
+
+    .go-to-game button {
+      background: #4a90e2;
+      color: white;
+      font-size: 18px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    @media (max-width: 480px) {
+      .go-to-game button {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔁 ЯЗЫКОВОЙ ПЕРЕКЛЮЧАТЕЛЬ -->
+<div class="top-bar">
+  Язык: 
+  <a href="#">Русский</a> | 
+  <a href="Сайт.html">Қазақша</a>
+</div>
+
+<div class="background-image"></div>
+
+<header>
+  <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Замок" />
+  <h1>Безопасный интернет для детей</h1>
+  <p>Учимся пользоваться интернетом с умом</p>
+</header>
+
+<nav>
+  <a href="#rules">Правила</a>
+  <a href="#quiz">Викторина</a>
+  <a href="#materials">Памятки</a>
+  <a href="#story">История</a>
+</nav>
+
+<main>
+  <section id="rules">
+    <h2>Основные правила безопасности</h2>
+    <ul class="rules">
+      <li>🔒 Не сообщай никому свои пароли.</li>
+      <li>⚠️ Не открывай подозрительные ссылки и вложения.</li>
+      <li>🕵️‍♂️ Не публикуй личную информацию в открытом доступе.</li>
+      <li>🔐 Используй сложные пароли и меняй их регулярно.</li>
+      <li>👨‍👩‍👧 Сообщай взрослым, если кто-то пишет неприятные или странные сообщения.</li>
+      <li>📥 Не загружай файлы с незнакомых сайтов.</li>
+      <li>🌐 Проверяй, чтобы сайты были защищены (адрес начинается с https).</li>
+      <li>🚫 Не доверяй незнакомцам в интернете — даже если они кажутся дружелюбными.</li>
+      <li>🛡️ Устанавливай антивирус и обновляй его.</li>
+      <li>🙅‍♂️ Не участвуй в оскорблениях, травле и не распространяй фейки.</li>
+    </ul>
+  </section>
+
+  <section id="quiz" class="quiz">
+    <h2>🧠 Мини-викторина</h2>
+    <!-- Викторина с вопросами — как раньше -->
+    <!-- ... (оставь без изменений) -->
+  </section>
+
+  <section id="materials" style="margin-top:40px;">
+    <h2>📄 Памятки и материалы</h2>
+    <p>📥 <a href="#" target="_blank">Скачать буклет PDF</a></p>
+    <p>📺 <a href="https://youtu.be/v7C6_jcmPSU?si=rXJGmKW2sT75qy4o" target="_blank">Посмотреть обучающее видео</a></p>
+  </section>
+
+  <section id="story">
+    <h2>📘 История из жизни</h2>
+    <div>
+      <p><strong>История Вани (10 лет):</strong></p>
+      <p>Однажды Ваня получил сообщение от незнакомца в онлайн-игре. Тот представился «новым другом» и попросил Ваню сообщить адрес, чтобы «прислать подарок». Ваня вспомнил, что нельзя рассказывать личные данные в интернете, и сразу рассказал родителям.</p>
+      <p>Родители похвалили его за правильное поведение и вместе заблокировали пользователя.</p>
+      <p><strong>Вывод:</strong> даже если кто-то кажется дружелюбным, нельзя доверять незнакомцам в интернете.</p>
+    </div>
+  </section>
+  <h2>🎮 Игра</h2>
+  <!-- КНОПКА: Перейти к игре -->
+  <div class="go-to-game">
+    <button onclick="document.getElementById('quiz-game').scrollIntoView({ behavior: 'smooth' });">▶️ Перейти</button>
+  </div>
+
+  <section id="quiz-game" style="margin-top:50px;">
+    <h2>🎮 Интерактивная игра-викторина</h2>
+   <div id="game-container"></div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Безопасный интернет | Проект школьника
+</footer>
+
+<script>
+  const quiz = [
+    {
+      q: "Что нельзя делать в интернете?",
+      a: [
+        { text: "Общаться с друзьями", correct: false },
+        { text: "Смотреть обучающее видео", correct: false },
+        { text: "Сообщать пароли незнакомцам", correct: true },
+        { text: "Играть в игры", correct: false }
+      ]
+    },
+    {
+      q: "Какой пароль надёжнее?",
+      a: [
+        { text: "123456", correct: false },
+        { text: "qwerty", correct: false },
+        { text: "Mys3cur3!Pass2025", correct: true },
+        { text: "admin", correct: false }
+      ]
+    },
+    {
+      q: "Что делать при получении угроз онлайн?",
+      a: [
+        { text: "Игнорировать", correct: false },
+        { text: "Ответить грубостью", correct: false },
+        { text: "Рассказать взрослым", correct: true },
+        { text: "Удалить интернет", correct: false }
+      ]
+    },
+    {
+      q: "Какие сайты безопасны?",
+      a: [
+        { text: "Сайты с https", correct: true },
+        { text: "Сайты без адреса", correct: false },
+        { text: "Сайты с яркой рекламой", correct: false },
+        { text: "Все подряд", correct: false }
+      ]
+    },
+    {
+      q: "Нужно ли обновлять антивирус?",
+      a: [
+        { text: "Нет, он и так работает", correct: false },
+        { text: "Да, для защиты от новых угроз", correct: true },
+        { text: "Только раз в год", correct: false },
+        { text: "Зависит от погоды", correct: false }
+      ]
+    }
+  ];
+
+  let current = 0;
+  let score = 0;
+
+  function createGameUI() {
+    const container = document.getElementById('game-container');
+    container.innerHTML = `
+      <div style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family:sans-serif; text-align:center;">
+        <h2 id="question">Загрузка...</h2>
+        <div id="answers"></div>
+        <button id="next-btn" style="margin-top:20px; padding:10px 20px; font-size:16px; display:none;">Следующий вопрос</button>
+      </div>
+    `;
+    document.getElementById('next-btn').onclick = nextQuestion;
+    loadQuestion();
+  }
+
+  function loadQuestion() {
+    const q = quiz[current];
+    document.getElementById("question").textContent = q.q;
+    const answersDiv = document.getElementById("answers");
+    answersDiv.innerHTML = "";
+
+    q.a.forEach(answer => {
+      const btn = document.createElement("button");
+      btn.textContent = answer.text;
+      btn.style.display = "block";
+      btn.style.width = "100%";
+      btn.style.margin = "10px 0";
+      btn.style.padding = "12px";
+      btn.style.fontSize = "16px";
+      btn.style.borderRadius = "8px";
+      btn.style.border = "1px solid #ccc";
+      btn.style.cursor = "pointer";
+      btn.onclick = () => checkAnswer(btn, answer.correct);
+      answersDiv.appendChild(btn);
+    });
+
+    document.getElementById("next-btn").style.display = "none";
+  }
+
+  function checkAnswer(button, correct) {
+    const buttons = document.querySelectorAll("#answers button");
+    buttons.forEach(btn => btn.disabled = true);
+    if (correct) {
+      button.style.backgroundColor = "#4CAF50";
+      button.style.color = "white";
+      score++;
+    } else {
+      button.style.backgroundColor = "#f44336";
+      button.style.color = "white";
+    }
+    document.getElementById("next-btn").style.display = "inline-block";
+  }
+
+  function nextQuestion() {
+    current++;
+    if (current < quiz.length) {
+      loadQuestion();
+    } else {
+      const container = document.getElementById('game-container');
+      container.innerHTML = `
+        <div style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family:sans-serif; text-align:center;">
+          <h2>Игра завершена!</h2>
+          <p>Вы набрали <strong>${score}</strong> из ${quiz.length} баллов.</p>
+          <p>${score === quiz.length ? "Отлично! Ты настоящий интернет-герой! 🏆" : "Хорошая попытка! Попробуй ещё раз."}</p>
+          <button onclick="restartQuiz()" style="margin-top:20px; padding:10px 20px; font-size:16px;">Пройти ещё раз</button>
+        </div>
+      `;
+    }
+  }
+
+  function restartQuiz() {
+    current = 0;
+    score = 0;
+    createGameUI();
+  }
+
+  // Запускаем игру при загрузке страницы
+  window.onload = createGameUI;
+</script>
+
+</body>
+</html>
+
